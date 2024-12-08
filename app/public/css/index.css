@@ -1,0 +1,51 @@
+  /* Reseta margens e padding padrão */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh; /* Para ocupar toda a altura da tela */
+    margin: 0;
+}
+
+/* Container principal usando Flexbox */
+.container {
+    display: flex;
+    flex: 1;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    flex-direction: row; /* Coloca os filhos lado a lado */
+}
+
+/* Estilo para o Mapa */
+#map {
+    flex: 1; /* O mapa ocupa o restante do espaço disponível */
+    background-color: #333; /* Cor de fundo (substitua pelo mapa real) */
+    color: white;
+    height: 110%;
+}
+
+/* Estilo para o Dashboard */
+.dashboard {
+    width: 300px; /* Largura fixa para o dashboard */
+    background-color: #333; /* Cor de fundo do dashboard */
+    color: white;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto; /* Permite rolar se o conteúdo for maior que a altura */
+}
+
+/* Responsividade: Quando a tela for pequena, coloca o dashboard abaixo do mapa */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+    .dashboard {
+        width: 100%; /* O dashboard ocupa toda a largura */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+}

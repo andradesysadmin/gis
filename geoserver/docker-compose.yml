@@ -1,0 +1,14 @@
+services:
+  geoserver:
+    image: docker.osgeo.org/geoserver:2.26.x
+    container_name: geoserver
+    ports:
+      - "8080:8080"
+    environment:
+      - GEOSERVER_DATA_DIR=/opt/geoserver_data
+    volumes:
+      - /home/gabriel/geoserver:/opt/geoserver_data
+    restart: always
+volumes:
+  geoserver_data:
+    driver: local
