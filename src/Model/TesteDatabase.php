@@ -1,12 +1,12 @@
 <?php
 
-require_once __DIR__ . '/db.php'; 
+require_once __DIR__ . '/Database.php'; 
 
+//Chamando a classe Database
 use App\Model\Database;
 use PDO;
 
 $db = new Database();
-
 $conn = $db->connect();
 
 if ($conn) {
