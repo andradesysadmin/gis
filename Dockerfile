@@ -6,7 +6,7 @@ WORKDIR /var
 
 RUN apt-get update && \ 
     apt-get install composer && \
-    apt-get install php-pgsql
+    apt-get install php php-pgsql
 
 RUN composer install
 
