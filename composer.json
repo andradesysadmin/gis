@@ -1,0 +1,9 @@
+{
+    "name": "gabriel/estudando_gis",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
