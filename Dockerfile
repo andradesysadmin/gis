@@ -1,8 +1,8 @@
 FROM php:8.2
 
-COPY . .
-
 WORKDIR /var
+
+COPY . .
 
 RUN apt-get update && \ 
     apt-get install composer && \
