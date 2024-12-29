@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="email" id="email" required>
         <label for="password">Senha:</label>
         <input type="password" name="password" id="password" required>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="enviar">Enviar</button>
     </form>
 </div>
 
