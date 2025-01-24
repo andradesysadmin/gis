@@ -66,17 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }),
                 new ol.layer.Tile({
                     source: new ol.source.TileWMS({
-                        url: 'http://localhost:8080/geoserver/ows',  // URL do seu GeoServer
-                        params: {
-                            'LAYERS': 'workspace:nome_da_sua_layer',  // Nome da camada que você criou no GeoServer
-                            'VERSION': '1.1.1'
-                        },
+                        url: 'http://localhost:8080/geoserver/ows',
                         serverType: 'geoserver'
                     })
                 })
             ],
             view: new ol.View({
-                center: ol.proj.fromLonLat([longitude, latitude]),  // Coordenadas do centro do mapa
+                center: ol.proj.fromLonLat([longitude, latitude]), 
                 zoom: 12
             })
         });
